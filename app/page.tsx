@@ -195,12 +195,14 @@ const TabsContent = ({
   value,
   children,
   activeTab,
+  className,
 }: {
   value: string;
   children: React.ReactNode;
+  className?: string;
 } & TabsContextProps) =>
   activeTab === value ? (
-    <div className="flex-1 outline-none">{children}</div>
+    <div className={cn("flex-1 outline-none", className)}>{children}</div>
   ) : null;
 
 /* --------------------------- Error Boundary --------------------------- */
